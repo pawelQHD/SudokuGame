@@ -17,7 +17,7 @@ public class SudokuGame {
 		};
 		
 		int[][] noBoard = {
-				{ 1, 1, 4, 4, 5, 6, 7, 8, 9 },
+				{ 1, 2, 3, 4, 5, 6, 7, 8, 9 },
 				{ 2, 3, 4, 5, 6, 7, 8, 9, 1 },
 				{ 3, 4, 5, 6, 7, 8, 9, 1, 2 },
 				{ 4, 5, 6, 7, 8, 9, 1, 2, 3 },
@@ -28,8 +28,8 @@ public class SudokuGame {
 				{ 9, 1, 2, 3, 4, 5, 6, 7, 8 }
 		};
 		
-		System.out.println(CheckingNumbers.checkFormat(yesBoard));
-		System.out.println(CheckingNumbers.checkFormat(noBoard));
+		Board objectYesBoard = new Board(yesBoard);
+		Board objectNoBoard = new Board(noBoard);
 
 	}
 

@@ -2,14 +2,20 @@ package logic;
 
 public class Board {
 	
-	private int[][] board = new int[9][9];
+	private int[][] board;
 	
 	public Board(int[][] board) {
-		this.board = board;
+		
+		if(BoardValidation.checkBoardValidity(board)) {
+			this.board = board;
+		} else {
+			throw new IllegalArgumentException("The board size is not valid.");
+		}
 	}
 	
 	public int[][] getBoard(){
 		return board;
 	}
+	
 	
 }
